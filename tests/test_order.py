@@ -22,7 +22,7 @@ def test_invalid_total(total):
 
 def test_vip_discount_200():
     o = Order(200, vip=True)          # Arrange: pedido VIP de $200
-    assert o.confirm() == 999         # Act + Assert: 200 - 15% = 170
+    assert o.confirm() == 170         # Act + Assert: 200 - 15% = 170
     assert o.status == "CONFIRMED"    # Assert: estado final
 
 
